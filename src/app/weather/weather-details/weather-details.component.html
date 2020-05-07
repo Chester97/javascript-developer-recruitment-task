@@ -1,0 +1,8 @@
+<div class="weather-details">
+    <h1>{{ data.name }}</h1>
+    <p>Temp: {{data.main.temp | kelvinToCelsius}} &#x2103;</p>
+    <p>Humidity: {{data.main.humidity}} %</p>
+    <p>Description: {{data.weather[0].description}}</p>
+    <button (click)="addToFavs()" *ngIf="!favorite">Add to favs</button>
+    <button (click)="removeFromFavs()" *ngIf="favorite">Remove from favs</button>
+</div>

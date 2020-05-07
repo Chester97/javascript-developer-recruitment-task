@@ -1,0 +1,9 @@
+<div>
+  <div class="main">
+    <input  [(ngModel)]="value" (ngModelChange)="onInputData()" type="text" class="input-search" placeholder="City name..."/>
+  </div>
+  <div class="result-container">
+    RESULTS
+    <app-weather [city]="query" [details]="true"></app-weather>
+  </div>
+</div>

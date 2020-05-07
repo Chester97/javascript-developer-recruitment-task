@@ -1,0 +1,8 @@
+<div class="weather">
+    <p *ngIf="error">Error!</p>
+    <p *ngIf="loading">Loading...</p>
+    <ng-container *ngIf="data">
+        <app-weather-details *ngIf="details" [data]="data"></app-weather-details>
+        <app-weather-compact *ngIf="!details" [data]="data"></app-weather-compact>
+    </ng-container>
+</div>
